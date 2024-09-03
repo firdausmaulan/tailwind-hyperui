@@ -7,7 +7,7 @@ const View = {
             const movieCard = document.createElement('div');
             movieCard.className = 'bg-gray-700 shadow-md rounded cursor-pointer rounded-lg';
             movieCard.innerHTML = `
-                <a href="../detail/detail.html?movieId=${movie.id}">
+                <a href="../detail/detail.html?movieId=${movie.id}" class="transition-opacity duration-300 hover:opacity-40">
                     <div>
                         <img
                             src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
