@@ -9,11 +9,11 @@ What I learn in this project :
 - Send data between page
 - Paging when click button prev and next button
 
-<img src="https://raw.githubusercontent.com/firdausmaulan/tailwind-hyperui/main/screenshot/movie1.jpeg" width="600">
+<img src="https://raw.githubusercontent.com/firdausmaulan/tailwind-hyperui/main/screenshot/movie1.png" width="600">
 
-<img src="https://raw.githubusercontent.com/firdausmaulan/tailwind-hyperui/main/screenshot/movie2.jpeg" width="600">
+<img src="https://raw.githubusercontent.com/firdausmaulan/tailwind-hyperui/main/screenshot/movie2.png" width="600">
 
-<img src="https://raw.githubusercontent.com/firdausmaulan/tailwind-hyperui/main/screenshot/movie3.jpeg" width="600">
+<img src="https://raw.githubusercontent.com/firdausmaulan/tailwind-hyperui/main/screenshot/movie3.png" width="600">
 
 Source :
 - https://youtu.be/c110BEEsPa0?si=1Af8CpCWmtWkZZ6f
