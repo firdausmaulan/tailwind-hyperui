@@ -15,18 +15,22 @@ const ListController = {
         const searchInput = document.getElementById('search-input');
 
         searchButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            const query = searchInput.value.trim();
-            console.log("searchButton click query : " + query);
-            this.currentQuery = query;
-            console.log("searchButton click currentQuery : " + this.currentQuery);
-            this.currentPage = 1; // Reset to first page on new search
-            this.loadMovies();
+            console.log("event.type : " + event.type);
+            if (event.type === 'click') {
+                event.preventDefault();
+                const query = searchInput.value.trim();
+                console.log("searchButton click query : " + query);
+                this.currentQuery = query;
+                console.log("searchButton click currentQuery : " + this.currentQuery);
+                this.currentPage = 1; // Reset to first page on new search
+                this.loadMovies();
+            }
         });
 
         searchInput.addEventListener('keypress', (event) => {
-            event.preventDefault();
+            console.log("event.key : " + event.key);
             if (event.key === 'Enter') {
+                event.preventDefault();
                 const query = searchInput.value.trim();
                 this.currentQuery = query;
                 this.currentPage = 1; // Reset to first page on new search
