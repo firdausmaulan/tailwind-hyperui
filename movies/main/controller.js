@@ -14,18 +14,23 @@ const ListController = {
         const searchButton = document.getElementById('search-button');
         const searchInput = document.getElementById('search-input');
 
-        searchButton.addEventListener('click', () => {
+        searchButton.addEventListener('click', (event) => {
+            event.preventDefault();
             const query = searchInput.value.trim();
+            console.log("searchButton click query : " + query);
             this.currentQuery = query;
+            console.log("searchButton click currentQuery : " + this.currentQuery);
             this.currentPage = 1; // Reset to first page on new search
             this.loadMovies();
         });
 
         searchInput.addEventListener('keypress', (event) => {
+            event.preventDefault();
             if (event.key === 'Enter') {
                 const query = searchInput.value.trim();
+                this.currentQuery = query;
                 this.currentPage = 1; // Reset to first page on new search
-                this.loadMovies(query);
+                this.loadMovies();
             }
         });
 
@@ -48,6 +53,7 @@ const ListController = {
 
     loadMovies: async function () {
         try {
+            console.log("loadMovies currentQuery : " + this.currentQuery);
             const response = await Model.fetchMovies(this.currentQuery, this.currentPage);
             const movies = response.results;
             View.renderMovies(movies);
